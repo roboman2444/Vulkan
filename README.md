@@ -37,6 +37,10 @@ The android examples have only been tested on NVIDIA hardware yet.
 
 The examples are build against **API Version 1.0.3** and support **implementations starting with 1.0.1**. This ensures that beta drivers not updated to the most recent API-Version can run the examples.
 
+## Additional documentation
+
+Additional documentation for several base classes and functionality (e.g. the swap chain) can be found [in this directory](./documentation/additionaldocs.md).
+
 ## Examples
 
 ## [Triangle](triangle/)
@@ -187,7 +191,6 @@ Demonstrates the use of a separate compute queue (and command buffer) to apply d
 <br><br>
 
 ## [(Geometry shader) Normal debugging](geometryshader/)
-----
 <img src="./screenshots/geom_normals.png" height="96px" align="right">
 
 Renders the vertex normals of a complex mesh with the use of a geometry shader. The mesh is rendered solid first and the a geometry shader that generates lines from the face normals is used in the second pass.
@@ -206,10 +209,6 @@ This repository also contains a few Android examples that are (for now) separate
 
 The examples already share a few source files with existing examples and might be integrated into them at some point.
 
-## Additional documentation
-- [Vulkan example base class](./documentation/examplebaseclass.md)
-- more to come...
-
 ## Credits
 Thanks to the authors of these libraries :
 - [OpenGL Mathematics (GLM)](https://github.com/g-truc/glm)
@@ -225,7 +224,7 @@ And a huge thanks to the Vulkan Working Group, Vulkan Adivsory Panel, the fine p
 - Voyager model by [NASA](http://nasa3d.arc.nasa.gov/models)
 - Astroboy COLLADA model copyright 2008 Sony Computer Entertainment Inc.
 - Bear mug model used in tessellation example by [Aare](http://opengameart.org/users/aare)
-- Textures used in some examples by [Hugues Muller](www.yughues-folio.com)
+- Textures used in some examples by [Hugues Muller](http://www.yughues-folio.com)
 
 ## External resources
 - [LunarG Vulkan SDK](https://vulkan.lunarg.com)

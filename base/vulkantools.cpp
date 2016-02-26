@@ -364,12 +364,26 @@ VkCommandBufferAllocateInfo vkTools::initializers::commandBufferAllocateInfo(VkC
 	return commandBufferAllocateInfo;
 }
 
+VkCommandPoolCreateInfo vkTools::initializers::commandPoolCreateInfo()
+{
+	VkCommandPoolCreateInfo cmdPoolCreateInfo = {};
+	cmdPoolCreateInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
+	return cmdPoolCreateInfo;
+}
+
 VkCommandBufferBeginInfo vkTools::initializers::commandBufferBeginInfo()
 {
 	VkCommandBufferBeginInfo cmdBufferBeginInfo = {};
 	cmdBufferBeginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
 	cmdBufferBeginInfo.pNext = NULL;
 	return cmdBufferBeginInfo;
+}
+
+VkCommandBufferInheritanceInfo vkTools::initializers::commandBufferInheritanceInfo()
+{
+	VkCommandBufferInheritanceInfo cmdBufferInheritanceInfo = {};
+	cmdBufferInheritanceInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_INHERITANCE_INFO;
+	return cmdBufferInheritanceInfo;
 }
 
 VkRenderPassBeginInfo vkTools::initializers::renderPassBeginInfo()

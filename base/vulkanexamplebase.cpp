@@ -526,7 +526,7 @@ void VulkanExampleBase::initVulkan(bool enableValidation)
 	VkBool32 validDepthFormat = vkTools::getSupportedDepthFormat(physicalDevice, &depthFormat);
 	assert(validDepthFormat);
 
-	swapChain.init(instance, physicalDevice, device);
+	swapChain.connect(instance, physicalDevice, device);
 }
 
 #ifdef _WIN32 
@@ -1025,15 +1025,15 @@ void VulkanExampleBase::setupRenderPass()
 void VulkanExampleBase::initSwapchain()
 {
 #ifdef _WIN32
-	swapChain.initSwapChain(windowInstance, window);
+	swapChain.initSurface(windowInstance, window);
 #else
-	swapChain.initSwapChain(connection, window);
+	swapChain.initSurface(connection, window);
 #endif
 }
 
 void VulkanExampleBase::setupSwapChain()
 {
-	swapChain.setup(setupCmdBuffer, &width, &height);
+	swapChain.create(setupCmdBuffer, &width, &height);
 }
 
 
